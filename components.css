@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@500&display=swap');
+:root{
+    --green:#27ae60;
+     --orange: #ff7800;
+     --black:#130f40;
+     --red:#e74c3c;
+     --white:#fff;
+     --light-color: #666;
+     --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+     --border:2rem solid rgba(0,0,0,.1);
+     --light-bg:#f6f6f6;
+
+}
+*{
+    font-family: 'Wix Madefor Display', sans-serif; 
+    margin:0; padding: 0;
+    box-sizing: border-box;
+    outline: none;border: none;
+    text-decoration: none; 
+    color : var(--black);
+}
+*::selection{
+    background-color: var(--green);
+    color:var(--white);
+}
+
+html{
+    font-size: medium;
+    overflow-x: hidden;
+scroll-behavior: smooth;
+scroll-padding-top: 5rem ;
+
+}
+body{
+    background-color: var(--light-color);
+}
+section{
+    padding:3rem 2rem;
+    max-width: 1200px;
+    margin:0 auto;
+ }
+ 
+ .btn,
+ .delete-btn,
+ .option-btn{
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+    border-radius: .5rem;
+    color:var(--white);
+    font-size: 2rem;
+    padding:1.3rem 3rem;
+    text-transform: capitalize;
+    cursor: pointer;
+    text-align: center;
+ }
+ .btn{
+    background-color: var(--green);
+ }
+ 
+ .delete-btn{
+    background-color: var(--red);
+ }
+ 
+ .option-btn{
+    background-color: var(--orange);
+ }
+
+ .btn:hover,
+.delete-btn:hover,
+.option-btn:hover{
+   background-color: var(--black);
+}
+.message{
+   position: sticky;
+   top:0;
+   max-width: 1200px;
+   margin:0 auto;
+   background-color: var(--light-bg);
+   padding:2rem;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap:1.5rem;
+   z-index: 10000;
+}
+
+.message span{
+   font-size: 2rem;
+   color:var(--black);
+}
+
+.message i{
+   font-size: 2.5rem;
+   cursor: pointer;
+   color:var(--red);
+}
+
+.message i:hover{
+   color:var(--black);
+}
+
+
+ .form-container{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+ .form-container form{
+    width: 50rem;
+    background-color: var(--white);
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    border:var(--border);
+    text-align: center;
+    padding:2rem;
+ }
+ .form-container form h3{
+    font-size: 3rem;
+    color:var(--black);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+ }
+ 
+ .form-container form .box{
+    width: 100%;
+    margin:1rem 0;
+    border-radius: .5rem;
+    border:var(--border);
+    padding:1.2rem 1.4rem;
+    font-size: 1.8rem;
+    color:var(--black);
+    background-color: var(--light-bg);
+ } 
+ .form-container form p{
+    margin-top: 2rem;
+    font-size: 2.2rem;
+    color:var(--light-color);
+ }
+ 
+ .form-container form p a{
+    color:var(--green);
+ }
+ 
+ .form-container form p a:hover{
+    text-decoration: underline;
+ }
+  
+
+
+
+
+
+ /* media queries  */
+
+@media (max-width:991px){
+
+   html{
+      font-size: 55%;
+   }
+   
+}
+
+@media (max-width:768px){
+
+   #menu-btn{
+      display: inline-block;
+   }
+
+   .header .flex .navbar{
+      border-top: var(--border);
+      border-bottom: var(--border);
+      background-color: var(--white);
+      position: absolute;
+      top:99%; left:0; right:0;
+      transition: .2s linear;
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+   }
+
+   .header .flex .navbar.active{
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+   }
+
+   .header .flex .navbar a{
+      display: block;
+      margin:2rem;   
+   }
+
+   .update-profile form .flex{
+      flex-wrap: wrap;
+      gap:0;
+   }
+
+   .update-profile form .flex .inputBox{
+      width: 100%;
+   }
+
+}
+
+@media (max-width:450px){
+
+   html{
+      font-size: 50%;
+   }
+
+   .flex-btn{
+      flex-flow: column;
+      gap:0;
+   }
+
+   .title{
+      font-size: 3rem;
+   }
+   
+}
